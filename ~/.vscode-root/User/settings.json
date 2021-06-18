@@ -1,0 +1,23 @@
+{
+    "emmet.excludeLanguages": [
+
+
+
+        "markdown"
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showExpandedAbbreviation": "always",
+    "files.associations": {
+        "*vue": "html",
+    },
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.colorTheme": "Night Owl",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tabCompletion": "onlySnippets"
+}

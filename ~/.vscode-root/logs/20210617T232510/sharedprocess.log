@@ -1,0 +1,55 @@
+[2021-06-17 23:25:34.100] [sharedprocess] [info] Installing extension: octref.vetur
+[2021-06-17 23:25:35.674] [sharedprocess] [info] Downloaded extension: octref.vetur /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/octref.vetur-0.34.1
+[2021-06-17 23:25:40.943] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.69d4620f-1633-4db7-a257-2a6ad7d41dfb: octref.vetur
+[2021-06-17 23:25:40.950] [sharedprocess] [info] Renamed to /root/.vscode/extensions/octref.vetur-0.34.1
+[2021-06-17 23:25:40.951] [sharedprocess] [info] Installation completed. octref.vetur
+[2021-06-17 23:25:40.956] [sharedprocess] [info] Extensions installed successfully: octref.vetur
+[2021-06-17 23:25:52.398] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-17 23:26:27.031] [sharedprocess] [info] Installing extension: pkief.material-icon-theme
+[2021-06-17 23:26:27.343] [sharedprocess] [info] Downloaded extension: pkief.material-icon-theme /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/pkief.material-icon-theme-4.7.0
+[2021-06-17 23:26:28.407] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.cb50891e-0a53-408e-af45-df420cf66d53: pkief.material-icon-theme
+[2021-06-17 23:26:28.412] [sharedprocess] [info] Renamed to /root/.vscode/extensions/pkief.material-icon-theme-4.7.0
+[2021-06-17 23:26:28.413] [sharedprocess] [info] Installation completed. pkief.material-icon-theme
+[2021-06-17 23:26:28.415] [sharedprocess] [info] Extensions installed successfully: pkief.material-icon-theme
+[2021-06-17 23:27:16.113] [sharedprocess] [info] Installing extension: ms-vscode.atom-keybindings
+[2021-06-17 23:27:16.341] [sharedprocess] [info] Downloaded extension: ms-vscode.atom-keybindings /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/ms-vscode.atom-keybindings-3.0.9
+[2021-06-17 23:27:16.362] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.fe68e64b-e45d-48b7-923c-76f293e66971: ms-vscode.atom-keybindings
+[2021-06-17 23:27:16.368] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ms-vscode.atom-keybindings-3.0.9
+[2021-06-17 23:27:16.369] [sharedprocess] [info] Installation completed. ms-vscode.atom-keybindings
+[2021-06-17 23:27:16.371] [sharedprocess] [info] Extensions installed successfully: ms-vscode.atom-keybindings
+[2021-06-17 23:27:22.953] [sharedprocess] [info] Installing extension: octref.vetur
+[2021-06-17 23:27:22.957] [sharedprocess] [info] Downloaded extension: octref.vetur /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/octref.vetur-0.34.1
+[2021-06-17 23:27:28.404] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.b326992f-c618-456a-84f4-b4804395dd33: octref.vetur
+[2021-06-17 23:27:28.410] [sharedprocess] [info] Renamed to /root/.vscode/extensions/octref.vetur-0.34.1
+[2021-06-17 23:27:28.411] [sharedprocess] [info] Installation completed. octref.vetur
+[2021-06-17 23:27:28.415] [sharedprocess] [info] Extensions installed successfully: octref.vetur
+[2021-06-17 23:27:35.733] [sharedprocess] [info] Installing extension: ms-vscode.vscode-typescript-tslint-plugin
+[2021-06-17 23:27:36.001] [sharedprocess] [info] Downloaded extension: ms-vscode.vscode-typescript-tslint-plugin /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/ms-vscode.vscode-typescript-tslint-plugin-1.3.3
+[2021-06-17 23:27:36.167] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.8e0bb41e-393b-4214-b775-bb9782e39d20: ms-vscode.vscode-typescript-tslint-plugin
+[2021-06-17 23:27:36.169] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ms-vscode.vscode-typescript-tslint-plugin-1.3.3
+[2021-06-17 23:27:36.171] [sharedprocess] [info] Installation completed. ms-vscode.vscode-typescript-tslint-plugin
+[2021-06-17 23:27:36.173] [sharedprocess] [info] Extensions installed successfully: ms-vscode.vscode-typescript-tslint-plugin
+[2021-06-17 23:27:40.440] [sharedprocess] [info] Installing extension: dbaeumer.vscode-eslint
+[2021-06-17 23:27:40.775] [sharedprocess] [info] Downloaded extension: dbaeumer.vscode-eslint /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/dbaeumer.vscode-eslint-2.1.23
+[2021-06-17 23:27:40.799] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.5948b865-2f5c-4c86-80cd-03baacea6945: dbaeumer.vscode-eslint
+[2021-06-17 23:27:40.802] [sharedprocess] [info] Renamed to /root/.vscode/extensions/dbaeumer.vscode-eslint-2.1.23
+[2021-06-17 23:27:40.804] [sharedprocess] [info] Installation completed. dbaeumer.vscode-eslint
+[2021-06-17 23:27:40.807] [sharedprocess] [info] Extensions installed successfully: dbaeumer.vscode-eslint
+[2021-06-17 23:27:50.104] [sharedprocess] [info] Installing extension: formulahendry.auto-close-tag
+[2021-06-17 23:27:50.478] [sharedprocess] [info] Downloaded extension: formulahendry.auto-close-tag /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/formulahendry.auto-close-tag-0.5.10
+[2021-06-17 23:27:50.515] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.348bfc5e-12e5-40e8-ba57-e305742596ce: formulahendry.auto-close-tag
+[2021-06-17 23:27:50.518] [sharedprocess] [info] Renamed to /root/.vscode/extensions/formulahendry.auto-close-tag-0.5.10
+[2021-06-17 23:27:50.519] [sharedprocess] [info] Installation completed. formulahendry.auto-close-tag
+[2021-06-17 23:27:50.520] [sharedprocess] [info] Extensions installed successfully: formulahendry.auto-close-tag
+[2021-06-17 23:28:06.704] [sharedprocess] [info] Installing extension: sdras.night-owl
+[2021-06-17 23:28:07.146] [sharedprocess] [info] Downloaded extension: sdras.night-owl /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/sdras.night-owl-2.0.0
+[2021-06-17 23:28:07.253] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.951b897f-90eb-4063-8d5c-e359a371acec: sdras.night-owl
+[2021-06-17 23:28:07.258] [sharedprocess] [info] Renamed to /root/.vscode/extensions/sdras.night-owl-2.0.0
+[2021-06-17 23:28:07.259] [sharedprocess] [info] Installation completed. sdras.night-owl
+[2021-06-17 23:28:07.262] [sharedprocess] [info] Extensions installed successfully: sdras.night-owl
+[2021-06-17 23:28:17.172] [sharedprocess] [info] Installing extension: ritwickdey.liveserver
+[2021-06-17 23:28:17.862] [sharedprocess] [info] Downloaded extension: ritwickdey.liveserver /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/ritwickdey.liveserver-5.6.1
+[2021-06-17 23:28:20.388] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.7757fe8c-0e62-471e-a107-ee13573f4202: ritwickdey.liveserver
+[2021-06-17 23:28:20.396] [sharedprocess] [info] Renamed to /root/.vscode/extensions/ritwickdey.liveserver-5.6.1
+[2021-06-17 23:28:20.398] [sharedprocess] [info] Installation completed. ritwickdey.liveserver
+[2021-06-17 23:28:20.401] [sharedprocess] [info] Extensions installed successfully: ritwickdey.liveserver

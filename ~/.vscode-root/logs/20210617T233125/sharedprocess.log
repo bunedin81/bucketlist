@@ -1,0 +1,7 @@
+[2021-06-17 23:32:06.818] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-17 23:46:12.311] [sharedprocess] [info] Installing extension: sdras.vue-vscode-snippets
+[2021-06-17 23:46:12.669] [sharedprocess] [info] Downloaded extension: sdras.vue-vscode-snippets /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/sdras.vue-vscode-snippets-2.2.0
+[2021-06-17 23:46:12.738] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.c5dff6cf-0132-4ba6-a621-5ea671b413a4: sdras.vue-vscode-snippets
+[2021-06-17 23:46:12.745] [sharedprocess] [info] Renamed to /root/.vscode/extensions/sdras.vue-vscode-snippets-2.2.0
+[2021-06-17 23:46:12.746] [sharedprocess] [info] Installation completed. sdras.vue-vscode-snippets
+[2021-06-17 23:46:12.804] [sharedprocess] [info] Extensions installed successfully: sdras.vue-vscode-snippets
