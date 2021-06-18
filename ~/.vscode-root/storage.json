@@ -1478,9 +1478,9 @@
             "folder": "file:///home/ubuntu/projects/bucketlist/bucketlist",
             "backupPath": "/home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/Backups/a52976b3498f1c909aeccf2037b7ff67",
             "uiState": {
-                "mode": 1,
+                "mode": 0,
                 "x": 611,
-                "y": 250,
+                "y": 249,
                 "width": 1024,
                 "height": 768
             }
