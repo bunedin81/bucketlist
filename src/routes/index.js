@@ -1,11 +1,30 @@
-import axios from 'axios';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-const instance = axios.create({
-    baseURL: process.env.VUE_APP_API_URL,
-});
+Vue.use(VueRouter);
 
-function registerUser(userData) {
-    return instance.post('signup', userData);
-}
-
-export { registerUser };
+export default new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            redirect: '/main',
+        },
+        {
+            path: '/main',
+            component: () => import('@/views/MainPage.vue'),
+        },
+        {
+            path: '/login',
+            component: () => import('@/views/LoginPage.vue'),
+        },
+        {
+            path: '/mybucketlist',
+            component: () => import('@/views/UserBucketlist.vue'),
+        },
+        {
+            path: '*',
+            component: () => import('@/views/NotFoundPage.vue'),
+        }
+    ],
+})
