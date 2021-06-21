@@ -9,6 +9,10 @@ const state = {
     userId: '',
     userName: '',
     userEmail: '',
+    userSex: '',
+    userCountry: '',
+    userCity: '',
+    userBirthYear: '',
 }
 
 export default new Vuex.Store({
