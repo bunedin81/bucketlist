@@ -8,8 +8,12 @@ function registerUser(userData) {
     return instance.post('signup', userData);
 }
 
-function getUserInfo(userId) {
-    return instance.get('user', userId);
+function getUserInfo(userData) {
+    return instance.get('user', userData);
 }
 
-export { getUserInfo, registerUser };
+function getUserBucketlist(userId) {
+    return instance.get('userbucketlist', userId);
+}
+
+export { getUserInfo, registerUser, getUserBucketlist };

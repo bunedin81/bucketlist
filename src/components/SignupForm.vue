@@ -48,7 +48,9 @@ export default {
                 city: this.city,
             };
             const { data } = await registerUser(userData);
-            this.$router.push('/');
+            if (data.response == "OK"){
+                this.$router.push('/mybucketlist');
+            }
             this.initForm();
         },
         initForm() {

@@ -18,17 +18,21 @@ export default {
                 const googleUser = await this.$gAuth.signIn();
                 this.$store.commit('setUserId', googleUser.getBasicProfile().getId());
                 this.$store.commit('setUserEmail', googleUser.getBasicProfile().getEmail());
-                getExistUser(this.$store.getId)
+                const userData = {
+                    userId: this.$store.getters.getUserId,
+                    userEmail: this.$store.getters.getUserEmail,
+                }
+                getExistUser(userData)
             } catch (e) {
                 console.error(e);
             } finally {
-                this.$router.push('/');
+                this.$router.push('/mybucketlist');
             }
         },
-        async getExistUser(userId) {
-            const { data } = await getUserInfo(userId);
+        async getExistUser(userData) {
+            const { data } = await getUserInfo(userData);
             if (data.isExist) {
-                this.$store.commit('setUserName', data.sex);
+                this.$store.commit('setUserName', data.name);
                 this.$store.commit('setUserSex', data.sex);
                 this.$store.commit('setUserCountry', data.country);
                 this.$store.commit('setUserCity', data.city);
