@@ -1,12 +1,8 @@
 <template>
     <form v-on:submit.prevent>
         <div>
-            <label for="userId">id: </label>
-            <input type="text" id="userId" v-model="username"/>
-        </div>
-        <div>
-            <label for="password">password: </label>
-            <input type="password" id="password" v-model="password"/>
+            <label for="userName">userName: </label>
+            <label for="text" id="userName" v-model="userName"/>
         </div>
         <div>
             <label for="birthYear">birthYear: </label>
@@ -33,8 +29,7 @@ import { registerUser } from '@/api/index';
 export default {
     data() {
         return {
-            userId: '',
-            password: '',
+            userName: '',
             birthYear: '',
             sex: '',
             country: '',
@@ -44,19 +39,20 @@ export default {
     methods: {
         async submitForm() {
             const userData = {
-                userId: this.userId,
-                password: this.password,
+                userId: this.$store.getters.getUserId,
+                userEmail: this.$store.getters.getUserEmail,
+                userName: this.userName,
                 birthYear: this.birthYear,
                 sex: this.sex,
                 country: this.country,
                 city: this.city,
             };
             const { data } = await registerUser(userData);
+            this.$router.push('/');
             this.initForm();
         },
         initForm() {
-            this.userId = '';
-            this.password = '';
+            this.userName = '';
             this.birthYear = '';
             this.sex = '';
             this.country = '';

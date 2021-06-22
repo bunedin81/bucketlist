@@ -17,7 +17,6 @@ export default {
             try {
                 const googleUser = await this.$gAuth.signIn();
                 this.$store.commit('setUserId', googleUser.getBasicProfile().getId());
-                this.$store.commit('setUserName', googleUser.getBasicProfile().getName());
                 this.$store.commit('setUserEmail', googleUser.getBasicProfile().getEmail());
                 getExistUser(this.$store.getId)
             } catch (e) {
@@ -29,6 +28,7 @@ export default {
         async getExistUser(userId) {
             const { data } = await getUserInfo(userId);
             if (data.isExist) {
+                this.$store.commit('setUserName', data.sex);
                 this.$store.commit('setUserSex', data.sex);
                 this.$store.commit('setUserCountry', data.country);
                 this.$store.commit('setUserCity', data.city);
