@@ -1,49 +1,31 @@
 <template>
-    <div>
-        <p>This is main Page.</p>
-        <router-link to='/login' v-if="!userId">login</router-link>
-        <button v-on:click="googleLogout" v-else>Logout</button>
-        <router-link to='/mybucketlist' v-if="userId">My Bucketlist</router-link>
-    </div>
+  <div>
+    <nav-bar v-bind:propsdata="userId" />
+    <p>This is main Page.</p>
+    <b-img
+      src="https://hip2save.com/wp-content/uploads/2020/06/Summer-bucket-list-printable.jpg?resize=1024%2C538&strip=all?w=1200&strip=all"
+      fluid
+      alt="Responsive image"
+    ></b-img>
+  </div>
 </template>
 
 <script>
+import NavBar from '../components/layout/NavBar.vue';
+
 export default {
-    data() {
-        return {
-            userId: null,
-            userName: null,
-            userEmail: null,
-        }
-    },
-    methods: {
-        async googleLogout() {
-            try {
-                await this.$gAuth.signOut();
-                this.clearUserInfo();
-                console.log("well done")
-            } catch (e) {
-                console.log("something happend")
-                console.error(e);
-            } finally {
-                console.log("finished");
-                this.$router.push('/');
-            }
-        },
-        clearUserInfo() {
-            this.$store.commit('setUserId', '');
-            this.$store.commit('setUserName', '');
-            this.$store.commit('setUserEmail', '');
-        },
-    },
-    created() {
-        this.userId = this.$store.getters.getUserId;
-        this.userName = this.$store.getters.getUserName;
-        this.userEmail = this.$store.getters.getUserEmail;
-    }
-}
+  components: {
+    NavBar,
+  },
+  data() {
+    return {
+      userId: null,
+    };
+  },
+  created() {
+    this.userId = this.$store.getters.getUserId;
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

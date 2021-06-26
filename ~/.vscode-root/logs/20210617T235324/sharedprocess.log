@@ -1,1 +1,7 @@
 [2021-06-17 23:54:06.564] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-22 03:27:30.475] [sharedprocess] [info] Installing extension: esbenp.prettier-vscode
+[2021-06-22 03:27:31.608] [sharedprocess] [info] Downloaded extension: esbenp.prettier-vscode /home/ubuntu/projects/bucketlist/bucketlist/~/.vscode-root/CachedExtensionVSIXs/esbenp.prettier-vscode-7.1.1
+[2021-06-22 03:27:32.009] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.c3c970ac-5941-42ad-9627-99939760797b: esbenp.prettier-vscode
+[2021-06-22 03:27:32.016] [sharedprocess] [info] Renamed to /root/.vscode/extensions/esbenp.prettier-vscode-7.1.1
+[2021-06-22 03:27:32.018] [sharedprocess] [info] Installation completed. esbenp.prettier-vscode
+[2021-06-22 03:27:32.022] [sharedprocess] [info] Extensions installed successfully: esbenp.prettier-vscode

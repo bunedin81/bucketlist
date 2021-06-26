@@ -19,5 +19,11 @@
     "editor.formatOnPaste": true,
     "workbench.colorTheme": "Night Owl",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.tabCompletion": "onlySnippets"
+    "editor.tabCompletion": "onlySnippets",
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.semi": false,
+    "prettier.javascriptEnable": ["javascript", "javascriptvue"],
+    "prettier.printWidth": 100,
 }
