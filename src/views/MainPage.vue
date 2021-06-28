@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-bar v-bind:propsdata="userId" />
+    <nav-bar v-bind:propsdata="userToken" />
     <p>This is main Page.</p>
     <b-img
       src="https://hip2save.com/wp-content/uploads/2020/06/Summer-bucket-list-printable.jpg?resize=1024%2C538&strip=all?w=1200&strip=all"
@@ -19,11 +19,11 @@ export default {
   },
   data() {
     return {
-      userId: null,
+      userToken: null,
     };
   },
   created() {
-    this.userId = this.$store.getters.getUserId;
+    this.userToken = this.$cookies.get('access-token');
   },
 };
 </script>

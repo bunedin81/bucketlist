@@ -3,6 +3,7 @@ import App from './App.vue';
 import store from './store/store';
 import router from '@/routes/index';
 import GAuth from 'vue-google-oauth2';
+import VueCookies from 'vue-cookies';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -14,6 +15,7 @@ Vue.use(GAuth, {
 });
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
+Vue.use(VueCookies);
 
 new Vue({
   render: h => h(App),

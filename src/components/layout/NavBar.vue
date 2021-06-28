@@ -50,9 +50,8 @@ export default {
       this.$router.push('/login');
     },
     clearUserInfo() {
-      this.$store.commit('setUserId', '');
-      this.$store.commit('setUserName', '');
-      this.$store.commit('setUserEmail', '');
+      this.$cookies.set('access-token', null);
+      this.$cookies.set('refresh-token', null);
     },
   },
 };

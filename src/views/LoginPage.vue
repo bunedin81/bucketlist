@@ -17,34 +17,29 @@ export default {
     async handleLogin() {
       try {
         const googleUser = await this.$gAuth.signIn();
-        this.$store.commit('setUserId', googleUser.getBasicProfile().getId());
-        this.$store.commit(
-          'setUserEmail',
-          googleUser.getBasicProfile().getEmail(),
-        );
-        const userData = {
-          userId: this.$store.getters.getUserId,
-          userEmail: this.$store.getters.getUserEmail,
+
+        const userInfo = {
+          userId: googleUser.getBasicProfile().getId(),
+          userEmail: googleUser.getBasicProfile().getEmail(),
         };
-        this.getExistUser(userData);
+        this.getExistUser(userInfo);
+        this.$router.push('/mybucketlist');
       } catch (e) {
         console.error(e);
-      } finally {
-        this.$router.push('/mybucketlist');
+        this.$router.push('/login');
       }
     },
-    async getExistUser(userData) {
+    async getExistUser(userInfo) {
       try {
-        const { data } = await getUserInfo(userData);
-        if (data) {
-          this.$store.commit('setUserName', data.name);
-          this.$store.commit('setUserSex', data.sex);
-          this.$store.commit('setUserCountry', data.country);
-          this.$store.commit('setUserCity', data.city);
-          this.$store.commit('setUserBirthYear', data.birthyear);
-          this.$router.push('/mybucketlist');
+        const { response } = await getUserInfo(userInfo.userId);
+        if (response.status) {
+          setData(response.data);
         } else {
-          this.$router.push('/signup');
+          alert('Not a user!');
+          this.$router.push({
+            path: '/signup',
+            params: { userId: userInfo.userId, userEmail: userInfo.userEmail },
+          });
         }
       } catch (e) {
         console.error(e);
@@ -52,9 +47,15 @@ export default {
         this.$router.push('/');
       }
     },
+    setData(data) {
+      this.$store.commit('setUserInfo', data.userInfo);
+      this.$store.commit('setUserBucketlist', data.userBucketlist);
+      this.$cookies.set('jwt-auth-token', data.headers.jwtAuthToken);
+    },
     clearUserData() {
-      this.$store.commit('setUserId', '');
-      this.$store.commit('setUserEmail', '');
+      this.$store.commit('setUserInfo', null);
+      this.$store.commit('setUserBucketlist', null);
+      this.$cookies.set('jwt-auth-token', null);
     },
   },
 };

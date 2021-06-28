@@ -1,5 +1,5 @@
 <template>
-  <form v-on:submit.prevent>
+  <form v-on:submit.prevent="submitForm">
     <div>
       <label for="userName">userName: </label>
       <input for="text" id="userName" v-model="userName" />
@@ -27,6 +27,7 @@
 <script>
 import { registerUser } from '@/api/index';
 export default {
+  props: ['propsdata'],
   data() {
     return {
       userName: '',
@@ -39,16 +40,17 @@ export default {
   methods: {
     async submitForm() {
       const userData = {
-        userId: this.$store.getters.getUserId,
-        userEmail: this.$store.getters.getUserEmail,
-        userName: this.userName,
+        userId: propsdata.userId.trinm(),
+        userEmail: propsdata.userEmail.trim(),
+        userName: this.userName.trim(),
         birthYear: this.birthYear,
-        sex: this.sex,
-        country: this.country,
-        city: this.city,
+        sex: this.sex.trim(),
+        country: this.country.trim(),
+        city: this.city.trim(),
       };
       const { data } = await registerUser(userData);
-      if (data.response == 'OK') {
+      if (data.response == 200) {
+        $route.push('/login');
         this.$router.push('/mybucketlist');
       }
       this.initForm();

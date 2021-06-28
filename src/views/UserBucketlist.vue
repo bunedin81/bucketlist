@@ -8,14 +8,17 @@
       {{ userInfo.userBirthYear }}
     </p>
     <ul>
-      <li v-for="bucketlist in bucketlists" v-bind:key="bucketlist">
+      <li v-for="bucketlist in userBucketlist" v-bind:key="bucketlist">
         {{ bucketlist.title }}
         <route-link to="`/bucketlist/${bucketlist.id}/detail`"
           >Detail</route-link
         >
-        <button v-on:click="toggleAchived">Achived?</button>
-        <button>Edit List</button>
-        <button>Delete From List</button>
+        <b-button v-if="bucketlist.achieved == 1" v-on:click="toggleAchieved">
+          Not yet Achieved..
+        </b-button>
+        <b-button v-on:click="toggleAchieved" v-else>Achieved!</b-button>
+        <button v-on:click="moveToEdit(bucketlist)">Edit List</button>
+        <button v-on:click="deleteBucketlist">Delete From List</button>
       </li>
     </ul>
     <button>New List</button>
@@ -23,37 +26,41 @@
 </template>
 
 <script>
-import { getUserBucketlist } from '@/api/index';
 import { NavBar } from '../components/layout/NavBar.vue';
 export default {
+  data() {
+    return {
+      userInfo: this.$store.getters.getUserInfo,
+      userBucketlist: this.$store.getters.getUserBucketlist,
+    };
+  },
   components: {
     NavBar,
   },
   data() {
-    return {
-      bucketlists: null,
-      userInfo: {
-        userName: this.$store.getters.getUserName,
-        userSex: this.$store.getters.getUserSex,
-        userCountry: this.$store.getters.getUserCountry,
-        userCity: this.$store.getters.getUserCity,
-        userBirthYear: this.$store.getters.getBirthYear,
-      },
-    };
+    return {};
   },
   methods: {
-    async getUserBucketlist() {
-      const userId = this.$store.getters.getUserId;
-      try {
-        const { data } = await getUserBucketlist(userId);
-        this.bucketlists = data;
-      } catch (e) {
-        console.log(e);
-      }
+    toggleAchieved() {},
+    moveToEdit(bucketlist) {
+      this.$route.push({
+        path: `/mybucetlist/{{ bucketlist.id }}/edit`,
+        params: bucketlist,
+      });
     },
+    deleteBucketlist() {},
+    // async getUserBucketlist() {
+    //   const userId = this.$store.getters.getUserId;
+    //   try {
+    //     const { data } = await getUserBucketlist(userId);
+    //     this.bucketlists = data;
+    //   } catch (e) {
+    //     console.log(e);
+    //   }
+    // },
   },
   created() {
-    this.getUserBucketlist();
+    // this.getUserBucketlist();
   },
 };
 </script>

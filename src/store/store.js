@@ -6,13 +6,8 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-    userId: '',
-    userName: '',
-    userEmail: '',
-    userSex: '',
-    userCountry: '',
-    userCity: '',
-    userBirthYear: '',
+    userInfo = null,
+    userBucketlist = [],
 }
 
 export default new Vuex.Store({
