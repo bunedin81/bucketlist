@@ -1,21 +1,22 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="/">NavBar</b-navbar-brand>
+      <b-navbar-brand href="/">Bucketlist</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-button size="sm" v-if="!propsdata" v-on:click="moveToLogin"
-            >Login</b-button
-          >
+          <b-button size="sm" v-if="!propsdata" href="/login">Login</b-button>
           <b-nav-item-dropdown right v-else>
             <!-- Using 'button-content' slot -->
             <template #button-content>
               <em>User</em>
             </template>
+            <b-dropdown-item href="/user">
+              Edit UserInfo
+            </b-dropdown-item>
             <b-dropdown-item href="/mybucketlist"
               >My Bucketlist</b-dropdown-item
             >
@@ -37,19 +38,18 @@ export default {
       try {
         await this.$gAuth.signOut();
         this.clearUserInfo();
-        console.log('well done');
+        console.log('Signout Success');
       } catch (e) {
-        console.log('something happend');
+        console.log('Error exception when signing out');
         console.error(e);
       } finally {
         console.log('finished');
         this.$router.push('/');
       }
     },
-    moveToLogin() {
-      this.$router.push('/login');
-    },
     clearUserInfo() {
+      this.$state.commit('setUserInfo', null);
+      this.$state.commit('setUserBucketlist', null);
       this.$cookies.set('access-token', null);
       this.$cookies.set('refresh-token', null);
     },

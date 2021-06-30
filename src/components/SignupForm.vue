@@ -1,27 +1,79 @@
 <template>
-  <form v-on:submit.prevent="submitForm">
-    <div>
-      <label for="userName">userName: </label>
-      <input for="text" id="userName" v-model="userName" />
-    </div>
-    <div>
-      <label for="birthYear">birthYear: </label>
-      <input type="number" id="birthYear" v-model="birthYear" />
-    </div>
-    <div>
-      <label for="sex">sex: </label>
-      <input type="text" id="sex" v-model="sex" />
-    </div>
-    <div>
-      <label for="country">country: </label>
-      <input type="text" id="country" v-model="country" />
-    </div>
-    <div>
-      <label for="city">city: </label>
-      <input type="text" id="city" v-model="city" />
-    </div>
-    <button type="submit">Signup</button>
-  </form>
+  <b-form v-on:submit.prevent="submitForm" v-on:reset.prevent="initForm">
+    <b-form-group
+      id="userName"
+      label="User Name"
+      label-for="inputUserName"
+      description="Please input your name."
+    >
+      <b-form-input
+        id="inputUserName"
+        v-model="userName"
+        type="text"
+        placeholder="Enter your Name"
+        required
+      >
+      </b-form-input>
+    </b-form-group>
+    <b-form-group
+      id="birthYear"
+      label="Birth Year"
+      label-for="inputBirthYear"
+      description="Please input your birth year."
+    >
+      <b-form-input
+        id="inputBirthYear"
+        v-model="birthYear"
+        type="text"
+        placeholder="Enter your Birth Year"
+        required
+      ></b-form-input>
+    </b-form-group>
+    <b-form-group
+      id="sex"
+      label="Sex"
+      label-for="inputSex"
+      description="Please input your sex."
+    >
+      <b-form-input
+        id="inputSex"
+        v-model="sex"
+        type="text"
+        placeholder="Enter your Sex"
+        required
+      ></b-form-input>
+    </b-form-group>
+    <b-form-group
+      id="country"
+      label="Country"
+      label-for="inputCountry"
+      description="Please input your country."
+    >
+      <b-form-input
+        id="inputCountry"
+        v-model="country"
+        type="text"
+        placeholder="Enter your Country"
+        required
+      ></b-form-input>
+    </b-form-group>
+    <b-form-group
+      id="city"
+      label="City"
+      label-for="inputCity"
+      description="Please input your city."
+    >
+      <b-form-input
+        id="inputCity"
+        v-model="city"
+        type="text"
+        placeholder="Enter your City"
+        required
+      ></b-form-input>
+    </b-form-group>
+    <b-button type="submit" variant="primary">Signup</b-button>
+    <b-button type="reset" variant="danger">Reset</b-button>
+  </b-form>
 </template>
 
 <script>

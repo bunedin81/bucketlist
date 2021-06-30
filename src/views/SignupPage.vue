@@ -1,6 +1,7 @@
 <template>
   <div>
-    Signup Page
+    <p>Welcome!</p>
+    <p>{{ userIfo.userId }}</p>
     <signup-form v-bind:propsdata="userInfo"></signup-form>
   </div>
 </template>
@@ -11,8 +12,8 @@ import SignupForm from '@/components/SignupForm.vue';
 export default {
   data: {
     userInfo: {
-      userId = this.$router.userInfo.userId,
-      userEmail = this.$router.userInfo.userEmail,
+      userId: this.$router.userInfo.userId,
+      userEmail: this.$router.userInfo.userEmail,
     },
   },
   components: {

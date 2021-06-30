@@ -1,9 +1,13 @@
 <template>
   <div>
-    <p>This is Login Page.</p>
-    <b-button @click="handleLogin">
-      <b-icon icon="google" /> Google ID로 로그인</b-button
+    <b-jumbotron
+      header="Welcome & Share your bucketlist!"
+      lead="Here's login Page!"
     >
+      <b-button variant="light" @click="handleLogin">
+        <b-icon icon="google" /> Login with Google Account</b-button
+      >
+    </b-jumbotron>
   </div>
 </template>
 
@@ -23,7 +27,6 @@ export default {
           userEmail: googleUser.getBasicProfile().getEmail(),
         };
         this.getExistUser(userInfo);
-        this.$router.push('/mybucketlist');
       } catch (e) {
         console.error(e);
         this.$router.push('/login');
@@ -33,7 +36,8 @@ export default {
       try {
         const { response } = await getUserInfo(userInfo.userId);
         if (response.status) {
-          setData(response.data);
+          this.setData(response.data);
+          this.$router.push('/mybucketlist');
         } else {
           alert('Not a user!');
           this.$router.push({
