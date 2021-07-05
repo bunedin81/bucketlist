@@ -23,6 +23,10 @@ export default new VueRouter({
       component: () => import('@/views/SignupPage.vue'),
     },
     {
+      path: '/user',
+      component: () => import('@/views/UserInfo.vue'),
+    },
+    {
       path: '/mybucketlist',
       component: () => import('@/views/UserBucketlist.vue'),
     },

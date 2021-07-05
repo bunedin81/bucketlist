@@ -7,6 +7,7 @@ import VueCookies from 'vue-cookies';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import Datepicker from 'vuejs-datepicker';
 
 Vue.config.productionTip = false;
 Vue.use(GAuth, {
@@ -16,6 +17,7 @@ Vue.use(GAuth, {
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.use(VueCookies);
+Vue.use(Datepicker);
 
 new Vue({
   render: h => h(App),

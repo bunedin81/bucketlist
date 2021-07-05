@@ -1,5 +1,6 @@
 <template>
   <div>
+    <nav-bar></nav-bar>
     <p>Welcome!</p>
     <p>{{ userIfo.userId }}</p>
     <signup-form v-bind:propsdata="userInfo"></signup-form>
@@ -8,16 +9,21 @@
 
 <script>
 import SignupForm from '@/components/SignupForm.vue';
+import NavBar from '@/components/layout/NavBar.vue';
 
 export default {
-  data: {
-    userInfo: {
-      userId: this.$router.userInfo.userId,
-      userEmail: this.$router.userInfo.userEmail,
-    },
+  data() {
+    return {
+      userInfo: {
+        userId: this.$router.userInfo.userId,
+        userEmail: this.$router.userInfo.userEmail,
+        singup: 'YES',
+      },
+    };
   },
   components: {
     SignupForm,
+    NavBar,
   },
 };
 </script>
